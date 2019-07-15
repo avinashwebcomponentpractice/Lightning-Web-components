@@ -2,11 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {
-            "c/praticeone": [
-                "praticeone/praticeone.js"
-            ]
-        }
+        "paths": {}
     },
     "include": [
         "**/*",
