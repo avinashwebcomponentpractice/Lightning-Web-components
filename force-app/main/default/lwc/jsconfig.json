@@ -2,7 +2,14 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/WelcomeToLWC": [
+                "WelcomeToLWC/WelcomeToLWC.js"
+            ],
+            "c/welcomeToLWC": [
+                "welcomeToLWC/welcomeToLWC.js"
+            ]
+        }
     },
     "include": [
         "**/*",
