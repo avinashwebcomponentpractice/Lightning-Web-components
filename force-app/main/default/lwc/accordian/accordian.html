@@ -1,0 +1,27 @@
+<template >
+   
+        <lightning-tabset active-tab-value="one" >
+            <lightning-tab label="Item One" value="one">
+            
+                <lightning-accordion allow-multiple-sections-open
+                                        onsectiontoggle={handleSectionToggle}
+                                        active-section-name={activeSections}>
+                    <template if:true={Accounts}>
+                        <template for:each={Accounts} for:item="account">
+                            <lightning-accordion-section key={account.Id} name="A" label={account.Name}>
+                                  <c-data-table-map keyvalue={account.Id} map={data}></c-data-table-map> 
+                            </lightning-accordion-section>
+                        </template>
+                    </template>
+                </lightning-accordion>
+                        
+            </lightning-tab>
+            <lightning-tab label="Item Two" value="two">
+                Two Content !
+            </lightning-tab>
+            <lightning-tab label="Item Three" value="three">
+                Three Content !
+            </lightning-tab>
+        </lightning-tabset>
+    </template>
+    
