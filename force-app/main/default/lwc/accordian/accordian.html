@@ -9,7 +9,19 @@
                     <template if:true={Accounts}>
                         <template for:each={Accounts} for:item="account">
                             <lightning-accordion-section key={account.Id} name="A" label={account.Name}>
-                                  <c-data-table-map keyvalue={account.Id} map={data}></c-data-table-map> 
+                                <lightning-button-menu slot="actions"
+                                  alternative-text="Show menu"
+                                  icon-size="x-small"
+                                  menu-alignment="right"
+                                  id={account.Id}
+                                  name={account.Id}
+                                  onselect={handlemenu} >
+                                    <lightning-menu-item id={account.Id} value="New" label="New"></lightning-menu-item>
+                                    <lightning-menu-item id={account.Id} value="Edit" label="Edit"></lightning-menu-item>
+                                    <lightning-menu-item id={account.Id} value="show_details" label="Show Details"></lightning-menu-item>
+                                
+                                </lightning-button-menu> 
+                                <c-data-table-map keyvalue={account.Id} map={data}></c-data-table-map> 
                             </lightning-accordion-section>
                         </template>
                     </template>
@@ -24,4 +36,3 @@
             </lightning-tab>
         </lightning-tabset>
     </template>
-    
