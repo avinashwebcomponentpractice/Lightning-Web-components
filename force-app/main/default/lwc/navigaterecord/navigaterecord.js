@@ -1,4 +1,3 @@
-    
 import { LightningElement } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 
