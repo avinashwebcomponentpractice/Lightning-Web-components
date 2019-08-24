@@ -9,7 +9,7 @@ public with sharing class ApexTypesController {
         // apexImperativeMethodWithComplexParams Lightning web component.
         String response = 'You entered "' + wrapper.someString + '" as String, and "' 
                           + wrapper.someInteger + '" as Integer value. The list contained '
-                          + wrapper.someList.size() + ' items.'; 
+                          + wrapper.someList.size() + ' items.'+ wrapper.someList; 
         return response;
     }
 
