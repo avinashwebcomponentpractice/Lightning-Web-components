@@ -132,6 +132,9 @@
             "c/libsMomentjs": [
                 "libsMomentjs/libsMomentjs.js"
             ],
+            "c/lookup": [
+                "lookup/lookup.js"
+            ],
             "c/miscContentAsset": [
                 "miscContentAsset/miscContentAsset.js"
             ],
@@ -222,6 +225,9 @@
             "c/recordViewFormStaticContact": [
                 "recordViewFormStaticContact/recordViewFormStaticContact.js"
             ],
+            "c/sampleLookupContainer": [
+                "sampleLookupContainer/sampleLookupContainer.js"
+            ],
             "c/todoList": [
                 "todoList/todoList.js"
             ],
@@ -254,12 +260,6 @@
             ],
             "c/wireListView": [
                 "wireListView/wireListView.js"
-            ],
-            "c/sampleLookupContainer": [
-                "sampleLookupContainer/sampleLookupContainer.js"
-            ],
-            "c/lookup": [
-                "lookup/lookup.js"
             ]
         }
     },
