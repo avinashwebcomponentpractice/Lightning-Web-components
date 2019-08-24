@@ -1,0 +1,38 @@
+<template >
+   
+        <lightning-tabset active-tab-value="one" >
+            <lightning-tab label="Item One" value="one">
+            
+                <lightning-accordion allow-multiple-sections-open
+                                        onsectiontoggle={handleSectionToggle}
+                                        active-section-name={activeSections}>
+                    <template if:true={Accounts}>
+                        <template for:each={Accounts} for:item="account">
+                            <lightning-accordion-section key={account.Id} name="A" label={account.Name}>
+                                <lightning-button-menu slot="actions"
+                                  alternative-text="Show menu"
+                                  icon-size="x-small"
+                                  menu-alignment="right"
+                                  id={account.Id}
+                                  name={account.Id}
+                                  onselect={handlemenu} >
+                                    <lightning-menu-item id={account.Id} value="New" label="New"></lightning-menu-item>
+                                    <lightning-menu-item id={account.Id} value="Edit" label="Edit"></lightning-menu-item>
+                                    <lightning-menu-item id={account.Id} value="show_details" label="Show Details"></lightning-menu-item>
+                                
+                                </lightning-button-menu> 
+                                <c-data-table-map keyvalue={account.Id} map={data}></c-data-table-map> 
+                            </lightning-accordion-section>
+                        </template>
+                    </template>
+                </lightning-accordion>
+                        
+            </lightning-tab>
+            <lightning-tab label="Item Two" value="two">
+                Two Content !
+            </lightning-tab>
+            <lightning-tab label="Item Three" value="three">
+                Three Content !
+            </lightning-tab>
+        </lightning-tabset>
+    </template>
